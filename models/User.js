@@ -11,7 +11,6 @@ UserSchema.methods.comparePassword = function(password,callback){
     bcrypt.compare(password,this.password,callback)
 }
 
-
 UserSchema.methods.toJSON = function(){
     var user = this.toObject();
     delete user.password;

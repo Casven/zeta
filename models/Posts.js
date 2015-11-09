@@ -3,6 +3,7 @@
  */
 
 var mongoose = require('mongoose');
+var Comments = require('./Comments.js')
 
 
 var PostsSchema = new mongoose.Schema({
