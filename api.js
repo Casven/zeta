@@ -179,6 +179,10 @@ app.post('/posts',function(req,res){
     })
 })
 
+app.get('/',function(req,res){
+    res.status(200).send({message: " successfully "});
+})
+
 app.get('/posts',function(req,res){
     var profile = req.body;
     Posts.find({},{},{sort:{postedon:-1}},function(err,col){
@@ -203,3 +207,6 @@ mongoose.connect('mongodb://superhero:superhero@ds033429.mongolab.com:33429/star
 var server = app.listen(port,function(){
     console.log('api listening on',port);
 })
+
+
+module.exports.getApp = app;
